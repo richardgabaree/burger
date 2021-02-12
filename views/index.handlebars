@@ -2,7 +2,7 @@
 	
 	<div class="row">
 	    <div class="center col-sm-12">
-			<img src="assets/img/burger.png" alt="Eat-Da-Burger App">
+			<img src="assets/img/bacon-burger.png" alt="Eat-Da-Burger App" width="200" height="200">
 	        <h1>Eat-Da-Burger App</h1>
 	        <p></p>
 	    </div>
@@ -16,37 +16,26 @@
 			<h2>Burgers Available To Eat!</h2>
 
 			<ul>
-			  {{#each burgers}}
-			    {{#unless this.devoured}}
-			      <li>
-			      	{{this.id}}
-			        {{this.burger_name}}
+				{{#each burgers}}
+				{{#unless devour}}
+				{{> burgers/burger-block devour=true}}
+				{{/unless}}
+				{{/each}}
+				</ul>
 
-			        <form action="/{{this.id}}?_method=PUT" method="POST">
-			          <input type="hidden" name="devoured" value="true">
-			          <button class="btn-primary" type="submit">Devour It!</button>
-			        </form>
-
-			      </li>
-			    {{/unless}}
-			  {{/each}}
-			</ul>
-
-	    </div>
+	    	</div>
 
 	    <div class="col-sm-6">
 
-			<h2>Burgers That Have Been Eaten!</h2>
-			
-			  {{#each burgers}}
-			    {{#if this.devoured}}
-			      <li>
-			      	{{this.id}}
-			        {{this.burger_name}}
+			  <h2>Burgers That Have Been Eaten</h2>
 
-			      </li>
-			    {{/if}}
-			  {{/each}}
+				<ul>
+				{{#each burgers}}
+				{{#if devour}}
+				{{> burgers/burger-block devour=false}}
+				{{/if}}
+				{{/each}}
+				</ul>
 			
 	    </div>
 
