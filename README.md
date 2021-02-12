@@ -28,10 +28,10 @@
     richardgabaree
 
   ## Links
-    ![Github Link](https://github.com/richardgabaree/note-taker)
+    ![Github Link]()
 
     ![Project Link](https://richardgabaree.github.io/note-taker/)
 
-    ![Heroku App](https://gabaree-note-taker.herokuapp.com/)
+    ![Heroku App](https://eatdaburgergabaree.herokuapp.com/)
 
   
