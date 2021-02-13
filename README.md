@@ -1,7 +1,7 @@
 # Title 
     Eat da Burger - Homework 13
 
-  <!-- ![webpage](/templates/assets/webpage.png) -->
+  <!-- ![webpage](/public/assets/img/homepage.png) -->
 
   ## Description 
    An app to keep track of burgers that you want to eat and burgers you have devoured. The app also allows you to add burgers you would like to devour in the        future. 
